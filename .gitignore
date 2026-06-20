@@ -46,7 +46,6 @@
 ExportedObj/
 .consulo/
 *.csproj
-!SampleProjects/Package-Generator-Sample/Coolishbee.PackageGenerator.Editor.csproj
 *.unityproj
 *.sln
 *.slnx

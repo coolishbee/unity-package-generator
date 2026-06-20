@@ -12,7 +12,6 @@
 .gradle/
 ExportedObj/
 *.csproj
-!Coolishbee.PackageGenerator.Editor.csproj
 *.unityproj
 *.sln
 *.slnx
