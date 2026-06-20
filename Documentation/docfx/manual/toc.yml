@@ -1,0 +1,17 @@
+# This is an automatically generated file
+- name: 소개
+  href: introduction.md
+- name: 사용 가이드
+  items:
+  - name: 패키지 생성
+    href: usage/package-generation.md
+  - name: 문서 생성
+    href: usage/documentation.md
+  - name: 샘플 생성
+    href: usage/sample.md
+- name: 문서 배포
+  items:
+  - name: GitHub Pages
+    href: deploy/github.md
+  - name: GitLab Pages
+    href: deploy/gitlab.md

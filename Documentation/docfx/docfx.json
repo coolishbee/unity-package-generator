@@ -1,0 +1,58 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../../SampleProjects/Package-Generator-Sample/",
+          "files": [
+            "Coolishbee.PackageGenerator.Editor.csproj"
+          ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ],
+        "exclude": [
+          "_site/**",
+          "docs/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      ".docfx/template"
+    ],
+    "globalMetadata": {
+      "_appName": "UPM Package Generator",
+      "_appTitle": "UPM Package Generator",
+      "_appLogoPath": "images/logo.png",
+      "_appFaviconPath": "images/favicon.ico",
+      "_enableSearch": true,
+      "_enableNewTab": true
+    },
+    "markdownEngineName": "markdig",
+    "markdownEngineProperties": {
+      "markdigExtensions": [
+        "tasklists",
+        "diagrams"
+      ]
+    }
+  }
+}
