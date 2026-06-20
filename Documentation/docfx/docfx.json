@@ -1,17 +1,4 @@
 {
-  "metadata": [
-    {
-      "src": [
-        {
-          "src": "../../SampleProjects/Package-Generator-Sample/",
-          "files": [
-            "Coolishbee.PackageGenerator.Editor.csproj"
-          ]
-        }
-      ],
-      "dest": "api"
-    }
-  ],
   "build": {
     "content": [
       {

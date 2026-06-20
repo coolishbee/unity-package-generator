@@ -10,7 +10,6 @@ permissions:
   contents: read
   pages: write
   id-token: write
-  checks: write
 
 concurrency:
   group: pages
@@ -25,29 +24,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Cache Unity Library
-        uses: actions/cache@v4
-        with:
-          path: SampleProjects/Package-Generator-Sample/Library
-          key: Library-${{ runner.os }}-${{ hashFiles('SampleProjects/Package-Generator-Sample/Packages/packages-lock.json', 'Packages/Package_Generator/**') }}
-          restore-keys: |
-            Library-${{ runner.os }}-
-
-      - name: Run Unity EditMode tests
-        uses: game-ci/unity-test-runner@v4
-        env:
-          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-        with:
-          projectPath: SampleProjects/Package-Generator-Sample
-          unityVersion: 6000.2.15f1
-          testMode: EditMode
-          githubToken: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Check generated project file
-        run: test -f SampleProjects/Package-Generator-Sample/Coolishbee.PackageGenerator.Editor.csproj
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
